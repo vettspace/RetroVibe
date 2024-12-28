@@ -1,5 +1,5 @@
 {
-    "name": "insomnia-plugin-retro-theme",
+    "name": "insomnia-plugin-retro-vibe-theme",
     "version": "1.0.0",
     "description": "A retro-style theme for Insomnia with calm colors.",
     "main": "theme.js",
@@ -9,8 +9,8 @@
     "insomnia": {
       "themes": [
         {
-          "name": "retro-vibes",
-          "displayName": "Retro Vibes"
+          "name": "retro-vibe",
+          "displayName": "Retro Vibe"
         }
       ]
     }
