@@ -1,8 +1,8 @@
 module.exports.themes = [
-  // Темная тема Retro Vibe
+  // Темная тема Retro Vibe (обновленная)
   {
     name: "retro-vibe-dark-customized",
-    displayName: "Retro Vibe (Dark)",
+    displayName: "Retro Vibe (Dark Customized)",
     theme: {
       background: {
         default: "#1F1F1F", // Основной темный фон
@@ -10,7 +10,7 @@ module.exports.themes = [
         notice: "#DA7297", // Розовый для уведомлений
         warning: "#FFC470", // Оранжевый для предупреждений
         danger: "#9A3B3B", // DELETE
-        surprise: "#4793AF", // GET
+        surprise: "#6E9CA1", // GET
         info: "#BB7CD7" // Фиолетовый для информации
       },
       foreground: {
@@ -56,7 +56,7 @@ module.exports.themes = [
             default: "#C7C8CC" // Светлый текст боковой панели
           },
           highlight: {
-            default: "#76ABAE" // Бирюзовый для выделения в боковой панели
+            default: "#6E9CA1" // Бирюзовый для выделения в боковой панели
           }
         },
         paneHeader: {
@@ -65,17 +65,20 @@ module.exports.themes = [
             notice: "#BB7CD7",
             warning: "#AF8260",
             danger: "#9A3B3B",
-            surprise: "#4793AF",
+            surprise: "#6E9CA1",
             info: "#BB7CD7"
-          }
+          },
+          foreground: {
+            surprise: "#F4F2DE"
+          },
         }
       }
     }
   },
-  // Светлая тема Retro Vibe
+  // Светлая тема Retro Vibe (обновленная)
   {
     name: "retro-vibe-light-customized",
-    displayName: "Retro Vibe (Light)",
+    displayName: "Retro Vibe (Light Customized)",
     theme: {
       background: {
         default: "#FFFFFF", // Основной светлый фон
