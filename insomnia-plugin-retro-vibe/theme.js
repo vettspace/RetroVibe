@@ -1,8 +1,8 @@
 module.exports.themes = [
-  // Темная тема Retro Vibe (обновленная)
+  // Темная тема Retro Vibe
   {
     name: "retro-vibe-dark-customized",
-    displayName: "Retro Vibe (Dark Customized)",
+    displayName: "Retro Vibe (Dark)",
     theme: {
       background: {
         default: "#1F1F1F", // Основной темный фон
@@ -12,6 +12,7 @@ module.exports.themes = [
         danger: "#9A3B3B", // DELETE
         surprise: "#6E9CA1", // GET
         info: "#BB7CD7" // Фиолетовый для информации
+
       },
       foreground: {
         default: "#C7C8CC", // Основной текст
@@ -31,20 +32,15 @@ module.exports.themes = [
         xlarge: "#C96868" // Очень крупные акценты красного
       },
       rawCss: `
+        * {
+            border: none !important;
+            box-shadow: none !important;
+          }
         .grid-template-app-layout {
           grid-template-rows: 0 1fr auto !important;
         }
         .grid-template-app-layout > *:first-child {
           display: none !important;
-        }
-        /* Обновление цвета текста вкладок */
-        .app-tabs__tab {
-          color: #D0D0D0 !important; /* Светло-серый для текста вкладок */
-          font-weight: 500 !important; /* Умеренно жирный текст */
-        }
-        .app-tabs__tab--active {
-          color: #FFFFFF !important; /* Белый для активной вкладки */
-          border-bottom: 2px solid #BB7CD7 !important; /* Фиолетовая линия под активной вкладкой */
         }
       `,
       styles: {
@@ -61,6 +57,7 @@ module.exports.themes = [
         },
         paneHeader: {
           background: {
+            default: "#191919",
             success: "#7F9F80",
             notice: "#BB7CD7",
             warning: "#AF8260",
@@ -75,10 +72,10 @@ module.exports.themes = [
       }
     }
   },
-  // Светлая тема Retro Vibe (обновленная)
+  // Светлая тема Retro Vibe
   {
     name: "retro-vibe-light-customized",
-    displayName: "Retro Vibe (Light Customized)",
+    displayName: "Retro Vibe (Light)",
     theme: {
       background: {
         default: "#FFFFFF", // Основной светлый фон
@@ -108,12 +105,17 @@ module.exports.themes = [
         xlarge: "#E5A1A1" // Очень крупные акценты красного
       },
       rawCss: `
+        * {
+            border: none !important;
+            box-shadow: none !important;
+          }
         .grid-template-app-layout {
           grid-template-rows: 0 1fr auto !important;
         }
         .grid-template-app-layout > *:first-child {
           display: none !important;
         }
+        
         /* Flat дизайн с менее заметными границами */
         .app-header,
         .app-sidebar,
@@ -123,19 +125,12 @@ module.exports.themes = [
         }
         .app-sidebar {
           border-right: 1px solid #E0E0E0 !important; /* Тонкая и приглушённая линия */
+        
         }
         .app-content {
           border-left: 1px solid #E0E0E0 !important; /* Тонкая и приглушённая линия */
         }
-        /* Контрастный текст для вкладок */
-        .app-tabs__tab {
-          color: #2B2A2A !important; /* Тёмный текст для вкладок */
-          font-weight: 500 !important; /* Умеренно жирный текст */
-        }
-        .app-tabs__tab--active {
-          color: #BB7CD7 !important; /* Фиолетовый для активной вкладки */
-          border-bottom: 2px solid #BB7CD7 !important; /* Линия под активной вкладкой */
-        }
+
       `,
       styles: {
         sidebar: {
@@ -151,6 +146,7 @@ module.exports.themes = [
         },
         paneHeader: {
           background: {
+            default: "#F9F9F9",
             success: "#859F3D",
             notice: "#CFA8DC",
             warning: "#D8BCA8",
