@@ -1,159 +1,214 @@
 module.exports.themes = [
-  // Темная тема Retro Vibe
+  // Dark theme Retro Vibe
   {
     name: "retro-vibe-dark-customized",
     displayName: "Retro Vibe (Dark)",
     theme: {
+      // Main theme colors
       background: {
-        default: "#1F1F1F", // Основной темный фон
-        success: "#859F3D", // POST
-        notice: "#DA7297", // Розовый для уведомлений
-        warning: "#FFC470", // Оранжевый для предупреждений
-        danger: "#9A3B3B", // DELETE
-        surprise: "#6E9CA1", // GET
-        info: "#BB7CD7" // Фиолетовый для информации
-
+        default: "#1F1F1F", // Main dark background of the app
+        success: "#859F3D", // POST request
+        notice: "#DA7297", // Notifications (PATCH request)
+        warning: "#FFC470", // Warnings (PUT request)
+        danger: "#9A3B3B", // DELETE request
+        surprise: "#6E9CA1", // GET request
+        info: "#BB7CD7" // Informational requests (OPTIONS/HEAD)
       },
       foreground: {
-        default: "#C7C8CC", // Основной текст
-        success: "#C7C8CC",
-        notice: "#C7C8CC",
-        warning: "#C7C8CC",
-        danger: "#C7C8CC",
-        surprise: "#C7C8CC",
-        info: "#1F1F1F"
+        default: "#C7C8CC", // Main text color
+        success: "#F5F5F5", // Text on success response background
+        notice: "#C7C8CC", // Text on notification background
+        warning: "#F5F5F5", // Text on warning background
+        danger: "#C7C8CC", // Text on error background
+        surprise: "#C7C8CC", // Text on GET request background
+        info: "#1F1F1F" // Text on informational messages background
       },
       highlight: {
-        default: "#B0B7A4", // Светлый фон для подсветки
-        xsmall: "#6FB4C0", // Бирюзовый для мелких акцентов
-        small: "#C99C6E", // Малые акценты оранжевого
-        medium: "#A1C281", // Средние акценты зеленого
-        large: "#BB7CD7", // Крупные акценты фиолетового
-        xlarge: "#C96868" // Очень крупные акценты красного
+        default: "#B0B7A4", // Main highlight color
+        xsmall: "#6FB4C0", // For small accents
+        small: "#C99C6E", // Small accents
+        medium: "#A1C281", // Medium accents
+        large: "#BB7CD7", // Large accents
+        xlarge: "#C96868" // Extra-large accents
       },
       rawCss: `
+        /* Remove unnecessary borders and shadows */
         * {
-            border: none !important;
-            box-shadow: none !important;
-          }
+          border: none !important;
+        }
+        /* Remove the top panel of the app */
         .grid-template-app-layout {
           grid-template-rows: 0 1fr auto !important;
         }
         .grid-template-app-layout > *:first-child {
           display: none !important;
         }
+
+        .editor {
+          /* Caret and text in the editor */
+          caret-color: #FFFFFF !important; /* White caret */
+          color: #FFFFFF !important; /* White text */
+          text-shadow: none;
+        }
+
+        /* Tabs */
+
+        /* Styles for active tab */
+        [aria-selected="true"] {
+          background-color: #191919 !important; /* Dark background */
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+          margin-left: 0px;
+        }
+
+        /* Styles for inactive tabs on hover */
+        [aria-selected="false"]:hover {
+          background-color: #2B2B2B !important; /* Color on hover */
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        
+        /* Styles for caret */
+        .CodeMirror-cursor {
+          border-left: 2px solid #F5F5F5 !important; /* White caret */
+        }
+        
+        /* Styles for dropdown menu */
+        [role="menu"].dropdown__menu {
+          border: 1px solid #B0B7A4 !important;
+          border-radius: 8px; /* Rounded corners */
+        }
+
       `,
       styles: {
         sidebar: {
           background: {
-            default: "#191919" // Темный фон боковой панели
+            default: "#191919" // Sidebar background
           },
           foreground: {
-            default: "#C7C8CC" // Светлый текст боковой панели
+            default: "#C7C8CC" // Sidebar text
           },
           highlight: {
-            default: "#6E9CA1" // Бирюзовый для выделения в боковой панели
+            default: "#6E9CA1" // Sidebar element highlights
           }
         },
         paneHeader: {
           background: {
-            default: "#191919",
-            success: "#7F9F80",
-            notice: "#BB7CD7",
-            warning: "#AF8260",
-            danger: "#9A3B3B",
-            surprise: "#6E9CA1",
-            info: "#BB7CD7"
+            default: "#191919", // Main pane header background
+            success: "#7F9F80", // Success requests
+            notice: "#BB7CD7", // Notifications
+            warning: "#AF8260", // Warnings
+            danger: "#9A3B3B", // Errors
+            surprise: "#6E9CA1", // GET requests
+            info: "#BB7CD7" // Informational requests
           },
           foreground: {
-            surprise: "#F4F2DE"
-          },
+            surprise: "#F4F2DE" // Text color on GET requests background
+          }
         }
       }
     }
   },
-  // Светлая тема Retro Vibe
+  // Light theme Retro Vibe
   {
     name: "retro-vibe-light-customized",
     displayName: "Retro Vibe (Light)",
     theme: {
+      // Main theme colors
       background: {
-        default: "#FFFFFF", // Основной светлый фон
-        success: "#5C8984", // POST
-        notice: "#BE5A83", // Розовый для уведомлений
-        warning: "#FFE4B2", // Оранжевый для предупреждений
-        danger: "#BE5A83", // DELETE
-        surprise: "#7E5CAD", // GET
-        info: "#CFA8DC" // Фиолетовый для информации
-
+        default: "#FFFFFF", // Main light background of the app
+        success: "#5C8984", // POST request
+        notice: "#BE5A83", // Notifications
+        warning: "#FFE4B2", // Warnings
+        danger: "#BE5A83", // DELETE request
+        surprise: "#7E5CAD", // GET request
+        info: "#CFA8DC" // Informational requests
       },
       foreground: {
-        default: "#607274", // Основной текст
-        success: "#f5f5f5",
-        notice: "#4B5945",
-        warning: "#4B5945",
-        danger: "#FBFBFB",
-        surprise: "#f5f5f5",
-        info: "#FFFFFF"
+        default: "#607274", // Main text
+        success: "#F5F5F5", // Text on success response background
+        notice: "#4B5945", // Text on notification background
+        warning: "#4B5945", // Text on warning background
+        danger: "#F5F5F5", // Text on error background
+        surprise: "#F7F7F7", // Text on GET request background
+        info: "#FFFFFF" // Text on informational requests background
       },
       highlight: {
-        default: "#607274", // Общий цвет
-        xsmall: "#A5CAD6", // Бирюзовый для мелких акцентов
-        small: "#D8BCA8", // Малые акценты оранжевого
-        medium: "#C5DAB0", // Средние акценты зеленого
-        large: "#CFA8DC", // Крупные акценты фиолетового
-        xlarge: "#E5A1A1" // Очень крупные акценты красного
+        default: "#607274", // Main highlight color
+        xsmall: "#A5CAD6", // Small accents
+        small: "#D8BCA8", // Small accents
+        medium: "#C5DAB0", // Medium accents
+        large: "#CFA8DC", // Large accents
+        xlarge: "#E5A1A1" // Extra-large accents
       },
       rawCss: `
+        /* Remove unnecessary borders and shadows */
         * {
-            border: none !important;
-            box-shadow: none !important;
-          }
+          border: none !important;
+          box-shadow: none !important;
+        }
+        /* Remove the top panel of the app */
         .grid-template-app-layout {
           grid-template-rows: 0 1fr auto !important;
         }
         .grid-template-app-layout > *:first-child {
           display: none !important;
         }
-        
-        /* Flat дизайн с менее заметными границами */
-        .app-header,
-        .app-sidebar,
-        .app-content {
-          border: none !important;
-          box-shadow: none !important;
-        }
-        .app-sidebar {
-          border-right: 1px solid #E0E0E0 !important; /* Тонкая и приглушённая линия */
-        
-        }
-        .app-content {
-          border-left: 1px solid #E0E0E0 !important; /* Тонкая и приглушённая линия */
+
+        .editor {
+          /* Text in the editor */
+          text-shadow: none;
         }
 
+        /* Tabs */
+
+        /* Styles for active tab */
+        [aria-selected="true"] {
+          background-color: #EEEEEE !important; /* Light background */
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+          margin-left: 0px;
+        }
+
+        /* Styles for inactive tabs on hover */
+        [aria-selected="false"]:hover {
+          background-color: #F5F5F5 !important; /* Color on hover */
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+         /* Styles for caret */
+        .CodeMirror-cursor {
+          border-left: 2px solid #424242 !important; /* White caret */
+        }
+        
+        /* Styles for dropdown menu */
+        [role="menu"].dropdown__menu {
+          border: 1px solid #257180 !important;
+          background-color: #EEEEEE !important;
+        }
       `,
       styles: {
         sidebar: {
           background: {
-            default: "#F9F9F9" // Светлый фон боковой панели
+            default: "#EEEEEE" // Sidebar background
           },
           foreground: {
-            default: "#2B2A2A" // Темный текст боковой панели
+            default: "#2B2A2A" // Sidebar text
           },
           highlight: {
-            default: "#257180" // Бирюзовый для выделения в боковой панели
+            default: "#257180" // Sidebar highlights
           }
         },
         paneHeader: {
           background: {
-            default: "#F9F9F9",
-            success: "#859F3D",
-            notice: "#CFA8DC",
-            warning: "#D8BCA8",
-            danger: "#E5A1A1",
-            surprise: "#257180",
-            info: "#CFA8DC",
-          }
+            default: "#EEEEEE", // Main pane header background
+            success: "#859F3D", // Success requests
+            notice: "#CFA8DC", // Notifications
+            warning: "#D8BCA8", // Warnings
+            danger: "#E5A1A1", // Errors
+            surprise: "#257180", // GET requests
+            info: "#CFA8DC" // Informational requests
+          },
         }
       }
     }
