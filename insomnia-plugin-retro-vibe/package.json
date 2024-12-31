@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A retro-style theme for Insomnia with calm colors.",
     "main": "theme.js",
-    "keywords": ["insomnia", "theme", "retro"],
+    "keywords": ["insomnia", "theme", "retro", "dark", "light"],
     "author": "Vitaliy Orlov",
     "license": "MIT",
     "insomnia": {
