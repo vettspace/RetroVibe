@@ -4,6 +4,8 @@
 
 Retro Vibe is a custom theme for [Insomnia](https://insomnia.rest), inspired by retro aesthetics. It features **dark** and **light** variants, offering calming colors and a minimalistic design to enhance your productivity and make your API testing experience enjoyable.
 
+![screen](https://github.com/user-attachments/assets/34ad3908-9c01-40d7-ac31-40f4331b596c)
+
 ---
 
 ## 🎨 Features
