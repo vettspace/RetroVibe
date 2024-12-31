@@ -1,4 +1,4 @@
-# Retro Vibe Theme for Insomnia
+# RetroVibe Theme for Insomnia
 
 [![Version](https://img.shields.io/npm/v/insomnia-plugin-retro-vibe-theme.svg)](https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme)
 
@@ -33,3 +33,23 @@ Alternatively, you can install it via NPM:
 
 ```bash
 npm install --global insomnia-plugin-retro-vibe-theme
+```
+### Step 3: 🚀 Usage
+
+1. Open Insomnia and go to Application → Preferences → Themes.
+2. Select Retro Vibe (Dark) or Retro Vibe (Light) from the theme list.
+3. Enjoy your retro-styled Insomnia experience!
+---
+### 🌟 Contributing
+
+Found an issue or have a suggestion? Open an issue or submit a pull request on [GitHub](https://github.com/vettspace/RetroVibe/issues)
+
+
+### 💖 Acknowledgements
+
+•	Inspired by retro design trends and color theory.
+•	Special thanks to the Insomnia team for creating such an extensible platform.
+
+---
+
+#### with ♥︎ by [vettspace](https://github.com/vettspaces)
