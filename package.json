@@ -6,23 +6,15 @@
   "keywords": ["insomnia", "theme", "retro", "dark", "light"],
   "author": "Vitaliy Orlov",
   "license": "MIT",
-  "insomnia": {
-    "themes": [
-      {
-        "name": "retro-vibe",
-        "displayName": "RetroVibe"
-      }
-    ]
-  },
   "scripts": {
-    "build": "cp ../README.md . && echo 'Build complete!'",
+    "build": "cp README.md . && echo 'Build complete!'",
     "prepublish": "npm run build",
     "publish": "npm publish"
   },
   "files": [
     "theme.js",
     "README.md",
-    "icon.png"
+    "logo.png"
   ],
   "repository": {
     "type": "git",
