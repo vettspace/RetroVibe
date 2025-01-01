@@ -25,10 +25,6 @@ jobs:
       - name: Build plugin
         run: npm run build
 
-      - name: Get package version
-        id: version
-        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
-
       - name: Publish to npm
         run: npm publish
         env:
@@ -42,6 +38,8 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
             ✅ Публикация RetroVibe выполнена успешно!
-            📦 Версия: ${{ env.VERSION }}
             📝 Коммит: ${{ github.event.head_commit.message }}
-            🔗 Ссылка: https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme
+            ⏾ Insomnia: https://insomnia.rest/plugins/insomnia-plugin-retro-vibe-theme
+            🔗 NPM: https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme
+            📦 GitHub: https://github.com/vettspace/RetroVibe
+            
