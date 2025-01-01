@@ -13,11 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Navigate to subdirectory
-        working-directory: ./insomnia-plugin-retro-vibe
-        run: |
-          echo "Switched to plugin directory: $(pwd)"
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -25,26 +20,22 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        working-directory: ./insomnia-plugin-retro-vibe
         run: npm install
 
       - name: Build plugin
-        working-directory: ./insomnia-plugin-retro-vibe
         run: npm run build
 
       - name: Get package version
         id: version
-        working-directory: ./insomnia-plugin-retro-vibe
         run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
 
       - name: Publish to npm
-        working-directory: ./insomnia-plugin-retro-vibe
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Send message to Telegram
-        if: success()
+        if: success() # Отправить сообщение только при успешной публикации
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
