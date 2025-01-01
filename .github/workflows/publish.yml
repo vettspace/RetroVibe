@@ -50,7 +50,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ✅ Публикация RetroVibe выполнена успешно!
+            ✅ Публикация RetroVibe выполнена!
             📝 Коммит: ${{ github.event.head_commit.message }}
             🌓 Insomnia: https://insomnia.rest/plugins/insomnia-plugin-retro-vibe-theme
             🔗 NPM: https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme
