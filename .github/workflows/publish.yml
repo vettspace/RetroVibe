@@ -26,20 +26,17 @@ jobs:
         run: npm run build
 
       - name: Configure npm registry
-        run: npm config set registry https://registry.npmjs.org/
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Verify npm auth
         run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to npm
         run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Send message to Telegram
-        if: success() # Отправить сообщение только при успешной публикации
+        if: success()
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
@@ -47,6 +44,6 @@ jobs:
           message: |
             ✅ Публикация RetroVibe выполнена успешно!
             📝 Коммит: ${{ github.event.head_commit.message }}
-            ⏾ Insomnia: https://insomnia.rest/plugins/insomnia-plugin-retro-vibe-theme
+            🌓 Insomnia: https://insomnia.rest/plugins/insomnia-plugin-retro-vibe-theme
             🔗 NPM: https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme
             📦 GitHub: https://github.com/vettspace/RetroVibe
