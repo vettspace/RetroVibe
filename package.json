@@ -3,11 +3,11 @@
   "version": "1.0.1",
   "description": "A retro-style theme for Insomnia with calm colors.",
   "main": "theme.js",
-  "keywords": ["insomnia", "theme", "retro", "dark", "light"],
+  "keywords": ["insomnia", "theme", "retro", "dark", "light", "calm"],
   "author": "Vitaliy Orlov",
   "license": "MIT",
   "scripts": {
-    "build": "cp README.md . && echo 'Build complete!'",
+    "build": "echo 'Build complete!'",
     "prepublish": "npm run build",
     "publish": "npm publish"
   },
