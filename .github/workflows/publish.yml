@@ -25,7 +25,23 @@ jobs:
       - name: Build plugin
         run: npm run build
 
+      - name: Get package version
+        id: version
+        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
+
       - name: Publish to npm
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Send message to Telegram
+        if: success() # Отправить сообщение только при успешной публикации
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            ✅ Публикация RetroVibe выполнена успешно!
+            📦 Версия: ${{ env.VERSION }}
+            📝 Коммит: ${{ github.event.head_commit.message }}
+            🔗 Ссылка: https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme
