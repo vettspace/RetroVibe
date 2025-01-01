@@ -25,6 +25,14 @@ jobs:
       - name: Build plugin
         run: npm run build
 
+      - name: Configure npm registry
+        run: npm config set registry https://registry.npmjs.org/
+
+      - name: Verify npm auth
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish to npm
         run: npm publish
         env:
@@ -42,4 +50,3 @@ jobs:
             ⏾ Insomnia: https://insomnia.rest/plugins/insomnia-plugin-retro-vibe-theme
             🔗 NPM: https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme
             📦 GitHub: https://github.com/vettspace/RetroVibe
-            
