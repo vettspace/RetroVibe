@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-retro-vibe-theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A retro-style theme for Insomnia with calm colors.",
   "main": "theme.js",
   "keywords": [
@@ -31,7 +31,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vettspace/RetroVibe.git"
+    "url": "git+https://github.com/vettspace/RetroVibe.git"
   },
   "bugs": {
     "url": "https://github.com/vettspace/RetroVibe/issues"
