@@ -17,7 +17,14 @@
   "insomnia": {
     "name": "retro-vibe",
     "displayName": "RetroVibe",
-    "type": "theme"
+    "type": "theme",
+    "description": "A retro-style theme for Insomnia with calm colors.",
+    "publisher": {
+      "name": "Vitaliy Orlov"
+    },
+    "images": {
+      "icon": "./logo.png"
+    }
   },
   "files": [
     "theme.js",
