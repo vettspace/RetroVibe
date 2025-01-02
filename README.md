@@ -47,8 +47,8 @@ Found an issue or have a suggestion? Open an issue or submit a pull request on [
 
 ### 💖 Acknowledgements
 
-•	Inspired by retro design trends and color theory.
-•	Special thanks to the Insomnia team for creating such an extensible platform.
+* Inspired by retro design trends and color theory.
+* Special thanks to the Insomnia team for creating such an extensible platform.
 
 ---
 
