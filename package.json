@@ -19,11 +19,6 @@
     "displayName": "RetroVibe",
     "type": "theme"
   },
-  "scripts": {
-    "build": "echo 'Build complete!'",
-    "prepublish": "npm run build",
-    "publish": "npm publish"
-  },
   "files": [
     "theme.js",
     "README.md",
