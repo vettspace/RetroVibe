@@ -1,10 +1,10 @@
 # RetroVibe Theme for Insomnia
 
-[![Version](https://img.shields.io/npm/v/insomnia-plugin-retro-vibe-theme.svg)](https://www.npmjs.com/package/insomnia-plugin-retro-vibe-theme)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/78f38db6-5aba-433f-8b2b-0f37a8e2f6ea" alt="3232" width="100%">
+</p>
 
 Retro Vibe is a custom theme for [Insomnia](https://insomnia.rest), inspired by retro aesthetics. It features **dark** and **light** variants, offering calming colors and a minimalistic design to enhance your productivity and make your API testing experience enjoyable.
-
-![333](https://github.com/user-attachments/assets/7fe3949f-fe27-4019-99b6-ea20c5a86d23)
 
 ---
 
@@ -15,6 +15,12 @@ Retro Vibe is a custom theme for [Insomnia](https://insomnia.rest), inspired by 
 - **Customizable UI:** Simplified and decluttered design with smooth accents.
 - **Highlighting for Request Types:** Distinct colors for POST, GET, DELETE, and other HTTP methods.
 - **Enhanced Editor View:** Simplified styles for focus and readability.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6e0cabf4-bbb5-4358-9e68-6ccbfded0d8b" alt="dark" width="49%">
+  <img src="https://github.com/user-attachments/assets/a535a936-9837-4ce5-9b6e-c2c4eb24e95a" alt="light" width="49%">
+</p>
+
 
 ---
 
