@@ -372,7 +372,7 @@ module.exports.themes = [
             surprise: "#257180",
             info: "#CFA8DC"
           }
-          // foreground не задан, поэтому будет наследоваться.
+          // foreground is not set, so it will be inherited
         }
       }
     }
