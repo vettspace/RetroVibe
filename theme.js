@@ -1,42 +1,58 @@
 module.exports.themes = [
-  // Dark theme RetroVibe
+  /*
+   * ============================
+   *        DARK THEME
+   *     RetroVibe Customized
+   * ============================
+   */
   {
     name: "retro-vibe-dark-customized",
     displayName: "RetroVibe (Dark)",
     theme: {
-      // Main theme colors
+      /*
+       * ========== Color Settings ==========
+       */
       background: {
-        default: "#1F1F1F", // Main dark background of the app
-        success: "#859F3D", // POST request
-        notice: "#DA7297", // Notifications (PATCH request)
-        warning: "#FFC470", // Warnings (PUT request)
-        danger: "#9A3B3B", // DELETE request
-        surprise: "#6E9CA1", // GET request
-        info: "#BB7CD7" // Informational requests (OPTIONS/HEAD)
+        default: "#1F1F1F", // Main dark background
+        success: "#859F3D", // POST requests
+        notice: "#DA7297",  // PATCH or notifications
+        warning: "#FFC470", // PUT
+        danger: "#9A3B3B",  // DELETE requests
+        surprise: "#6E9CA1",// GET requests
+        info: "#BB7CD7"     // OPTIONS/HEAD
       },
       foreground: {
-        default: "#C7C8CC", // Main text color
-        success: "#F5F5F5", // Text on success response background
-        notice: "#C7C8CC", // Text on notification background
-        warning: "#F5F5F5", // Text on warning background
-        danger: "#C7C8CC", // Text on error background
-        surprise: "#C7C8CC", // Text on GET request background
-        info: "#1F1F1F" // Text on informational messages background
+        default: "#C7C8CC", // Main text
+        success: "#F5F5F5",
+        notice: "#C7C8CC",
+        warning: "#F5F5F5",
+        danger: "#C7C8CC",
+        surprise: "#C7C8CC",
+        info: "#1F1F1F"
       },
       highlight: {
-        default: "#B0B7A4", // Main highlight color
-        xsmall: "#6FB4C0", // For small accents
-        small: "#C99C6E", // Small accents
-        medium: "#A1C281", // Medium accents
-        large: "#BB7CD7", // Large accents
-        xlarge: "#C96868" // Extra-large accents
+        default: "#B0B7A4",
+        xsmall: "#6FB4C0",
+        small: "#C99C6E",
+        medium: "#A1C281",
+        large: "#BB7CD7",
+        xlarge: "#C96868"
       },
+
+      /*
+       * ========== Global and Custom Styles ==========
+       */
       rawCss: `
-        /* Remove unnecessary borders and shadows */
+        /* =========================================
+           1. Global Resets
+        ========================================== */
         * {
           border: none !important;
         }
-        /* Remove the top panel of the app */
+
+        /* =========================================
+           2. Hide Top Panel
+        ========================================== */
         .grid-template-app-layout {
           grid-template-rows: 0 1fr auto !important;
         }
@@ -44,42 +60,65 @@ module.exports.themes = [
           display: none !important;
         }
 
+        /* =========================================
+           3. Editor Styles
+        ========================================== */
         .editor {
-          /* Caret and text in the editor */
-          caret-color: #FFFFFF !important; /* White caret */
-          color: #FFFFFF !important; /* White text */
+          caret-color: #FFFFFF !important;
+          color: #FFFFFF !important;
           text-shadow: none;
         }
+        .CodeMirror-cursor {
+          border-left: 2px solid #F5F5F5 !important;
+        }
 
-        /* Tabs */
-
-        /* Styles for active tab */
+        /* =========================================
+           4. Tabs
+        ========================================== */
+        [role="tab"] {
+          border-radius: 6px;
+          transition: none !important; 
+        }
         [aria-selected="true"] {
-          background-color: #191919 !important; /* Dark background */
-          border-bottom-left-radius: 3px;
-          border-bottom-right-radius: 3px;
+          background-color: #191919 !important;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
           margin-left: 0px;
         }
-
-        /* Styles for inactive tabs on hover */
         [aria-selected="false"]:hover {
-          background-color: #2B2B2B !important; /* Color on hover */
-          border-bottom-left-radius: 3px;
-          border-bottom-right-radius: 3px;
+          background-color: #2B2B2B !important;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
         }
-        
-        /* Styles for caret */
-        .CodeMirror-cursor {
-          border-left: 2px solid #F5F5F5 !important; /* White caret */
-        }
-        
-        /* Styles for dropdown menu */
+
+        /* =========================================
+           5. Dropdown Menu
+        ========================================== */
         [role="menu"].dropdown__menu {
           border: 1px solid #B0B7A4 !important;
-          border-radius: 8px; /* Rounded corners */
+          border-radius: 8px;
         }
 
-        .p-4.flex-shrink-0 > .text-xs.max-h-32{
+        /* =========================================
+           6. Request Tabs (pre-request, after-response, etc.)
+        ========================================== */
+        [aria-label="Request scripts tabs"] [data-key="pre-request"][aria-selected="true"],
+        [aria-label="Request scripts tabs"] [data-key="after-response"][aria-selected="true"],
+        [aria-label="Request scripts tabs"] [data-key="write"][aria-selected="true"],
+        [aria-label="Request scripts tabs"] [data-key="preview"][aria-selected="true"] {
+          border-radius: 6px !important;
+        }
+        [aria-label="Request scripts tabs"] [data-key="pre-request"]:hover,
+        [aria-label="Request scripts tabs"] [data-key="after-response"]:hover,
+        [aria-label="Request scripts tabs"] [data-key="write"]:hover,
+        [aria-label="Request scripts tabs"] [data-key="preview"]:hover {
+          border-radius: 6px !important;
+        }
+
+        /* =========================================
+           7. Misc Small Styles
+        ========================================== */
+        .p-4.flex-shrink-0 > .text-xs.max-h-32 {
           border-radius: 9px;
           padding: 9px;
           font-size: 10px;
@@ -89,16 +128,17 @@ module.exports.themes = [
           justify-content: center;
           align-items: center;
         }
-
         [aria-label="Request scripts tabs"] {
           display: flex;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          text-align: center;
           padding: 9px;
+          text-align: center;
         }
 
+        /* =========================================
+           8. Toolbar Styles
+        ========================================== */
         [role="toolbar"] {
           display: flex;
           align-items: center;
@@ -107,96 +147,102 @@ module.exports.themes = [
           padding-left: 11px;
           padding-right: 11px;
         }
-        
-        [role="toolbar"] button {
-          font-size: 0.93em;
-          transition: background-color 0.3s, border-radius 0.3s;
-        }
-        [role="toolbar"] button:hover {
-          border-radius: 9px;
-        }
-
+        [role="toolbar"] button,
         div[class*="flex items-center gap-2"] button {
           font-size: 0.93em;
           transition: background-color 0.3s, border-radius 0.3s;
         }
-
+        [role="toolbar"] button:hover,
         div[class*="flex items-center gap-2"] button:hover {
           border-radius: 9px;
         }
-  
-
-
+        [data-panel-group-direction="horizontal"][role="separator"] {
+          width: 0px !important;
+          background: transparent !important;
+        }
       `,
+      /*
+       * ========== Additional Styles ==========
+       */
       styles: {
         sidebar: {
-          background: {
-            default: "#191919" // Sidebar background
-          },
-          foreground: {
-            default: "#C7C8CC" // Sidebar text
-          },
-          highlight: {
-            default: "#6E9CA1" // Sidebar element highlights
-          }
+          background: { default: "#191919" },
+          foreground: { default: "#C7C8CC" },
+          highlight:  { default: "#6E9CA1" }
         },
         paneHeader: {
           background: {
-            default: "#191919", // Main pane header background
-            success: "#7F9F80", // Success requests
-            notice: "#BB7CD7", // Notifications
-            warning: "#AF8260", // Warnings
-            danger: "#9A3B3B", // Errors
-            surprise: "#6E9CA1", // GET requests
-            info: "#BB7CD7" // Informational requests
+            default: "#191919",
+            success: "#7F9F80",
+            notice: "#BB7CD7",
+            warning: "#AF8260",
+            danger: "#9A3B3B",
+            surprise: "#6E9CA1",
+            info: "#BB7CD7"
           },
           foreground: {
-            surprise: "#F4F2DE" // Text color on GET requests background
+            surprise: "#F4F2DE"
           }
         }
       }
     }
   },
-  // Light theme RetroVibe
+
+  /*
+   * ============================
+   *       LIGHT THEME
+   *     RetroVibe Customized
+   * ============================
+   */
   {
     name: "retro-vibe-light-customized",
     displayName: "RetroVibe (Light)",
     theme: {
-      // Main theme colors
+      /*
+       * ========== Color Settings ==========
+       */
       background: {
-        default: "#FFFFFF", // Main light background of the app
-        success: "#5C8984", // POST request
-        notice: "#BE5A83", // Notifications
-        warning: "#FFE4B2", // Warnings
-        danger: "#BE5A83", // DELETE request
-        surprise: "#7E5CAD", // GET request
-        info: "#CFA8DC" // Informational requests
+        default: "#FFFFFF", // Main light background
+        success: "#5C8984", // POST requests
+        notice: "#BE5A83",  // Notifications
+        warning: "#FFA500", // Warnings
+        danger: "#BE5A83",  // DELETE requests
+        surprise: "#7E5CAD",// GET requests
+        info: "#CFA8DC"     // Informational
       },
       foreground: {
         default: "#607274", // Main text
-        success: "#F5F5F5", // Text on success response background
-        notice: "#4B5945", // Text on notification background
-        warning: "#4B5945", // Text on warning background
-        danger: "#F5F5F5", // Text on error background
-        surprise: "#F7F7F7", // Text on GET request background
-        info: "#FFFFFF" // Text on informational requests background
+        success: "#F5F5F5",
+        notice: "#4B5945",
+        warning: "#4B5945",
+        danger: "#F5F5F5",
+        surprise: "#F7F7F7",
+        info: "#FFFFFF"
       },
       highlight: {
-        default: "#607274", // Main highlight color
-        xsmall: "#A5CAD6", // Small accents
-        small: "#D8BCA8", // Small accents
-        medium: "#C5DAB0", // Medium accents
-        large: "#CFA8DC", // Large accents
-        xlarge: "#E5A1A1" // Extra-large accents
+        default: "#607274",
+        xsmall: "#A5CAD6",
+        small: "#D8BCA8",
+        medium: "#C5DAB0",
+        large: "#CFA8DC",
+        xlarge: "#E5A1A1"
       },
 
+      /*
+       * ========== Global and Custom Styles ==========
+       */
       rawCss: `
-        /* Remove unnecessary borders and shadows */
+        /* =========================================
+           1. Global Resets
+        ========================================== */
         * {
           border: none !important;
           box-shadow: none !important;
         }
-        /* Remove the top panel of the app */
+
+        /* =========================================
+           2. Hide Top Panel
+        ========================================== */
         .grid-template-app-layout {
           grid-template-rows: 0 1fr auto !important;
         }
@@ -204,64 +250,67 @@ module.exports.themes = [
           display: none !important;
         }
 
+        /* =========================================
+           3. Editor Styles
+        ========================================== */
         .editor {
-          /* Text in the editor */
+          /* No text-shadow for the editor in light theme */
           text-shadow: none;
         }
+        .CodeMirror-cursor {
+          /* Dark cursor for contrast */
+          border-left: 2px solid #424242 !important;
+        }
 
-        /* Tabs */
-
-        /* Styles for active tab */
+        /* =========================================
+           4. Tabs
+        ========================================== */
+        [role="tab"] {
+          border-radius: 6px;
+          transition: none !important; 
+        }
         [aria-selected="true"] {
-          background-color: #EEEEEE !important; /* Light background */
-          border-bottom-left-radius: 3px;
-          border-bottom-right-radius: 3px;
+          background-color: #EEEEEE !important;
+          border-top-left-radius: 0px; 
+          border-top-right-radius: 0px;
           margin-left: 0px;
         }
-
-        /* Styles for inactive tabs on hover */
         [aria-selected="false"]:hover {
-          background-color: #F5F5F5 !important; /* Color on hover */
-          border-bottom-left-radius: 3px;
-          border-bottom-right-radius: 3px;
+          background-color: #F5F5F5 !important;
+          border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
         }
-         /* Styles for caret */
-        .CodeMirror-cursor {
-          border-left: 2px solid #424242 !important; /* White caret */
-        }
-        
-        /* Styles for dropdown menu */
+
+        /* =========================================
+           5. Dropdown Menu
+        ========================================== */
         [role="menu"].dropdown__menu {
           border: 1px solid #257180 !important;
           background-color: #EEEEEE !important;
         }
-        .flex flex-1 items-center gap-2{
-          color: #000 !important;
-        }
 
-        /*Pre-request */
-
-        [data-key="pre-request"][aria-selected="true"],
-        [data-key="after-response"][aria-selected="true"],
-        [data-key="write"][aria-selected="true"],
-        [data-key="preview"][aria-selected="true"] {
+        /* =========================================
+           6. Request Tabs (pre-request, after-response, etc.)
+        ========================================== */
+        [aria-label="Request scripts tabs"] [data-key="pre-request"][aria-selected="true"],
+        [aria-label="Request scripts tabs"] [data-key="after-response"][aria-selected="true"],
+        [aria-label="Request scripts tabs"] [data-key="write"][aria-selected="true"],
+        [aria-label="Request scripts tabs"] [data-key="preview"][aria-selected="true"] {
           color: #607274 !important;
+          border-radius: 6px !important;
         }
-
-        [data-key="pre-request"][aria-selected="false"],
-        [data-key="after-response"][aria-selected="false"],
-        [data-key="write"][aria-selected="false"] {
-          color: #919E9E !important;
-        }
-
-        [data-key="pre-request"]:hover,
-        [data-key="after-response"]:hover,
-        [data-key="write"]:hover,
-        [data-key="preview"]:hover {
+        [aria-label="Request scripts tabs"] [data-key="pre-request"]:hover,
+        [aria-label="Request scripts tabs"] [data-key="after-response"]:hover,
+        [aria-label="Request scripts tabs"] [data-key="write"]:hover,
+        [aria-label="Request scripts tabs"] [data-key="preview"]:hover {
           color: #607274 !important;
+          border-radius: 6px !important;
         }
 
-        .p-4.flex-shrink-0 > .text-xs.max-h-32{
+        /* =========================================
+           7. Misc Small Styles
+        ========================================== */
+        .p-4.flex-shrink-0 > .text-xs.max-h-32 {
           border-radius: 9px;
           padding: 9px;
           font-size: 10px;
@@ -271,16 +320,16 @@ module.exports.themes = [
           justify-content: center;
           align-items: center;
         }
-
         [aria-label="Request scripts tabs"] {
           display: flex;
           align-items: center;
           justify-content: center;
-          text-align: center;
-          text-align: center;
           padding: 9px;
         }
 
+        /* =========================================
+           8. Toolbar Styles
+        ========================================== */
         [role="toolbar"] {
           display: flex;
           align-items: center;
@@ -289,46 +338,41 @@ module.exports.themes = [
           padding-left: 11px;
           padding-right: 11px;
         }
-        
-        [role="toolbar"] button {
-          font-size: 0.93em;
-          transition: background-color 0.3s, border-radius 0.3s;
-        }
-        [role="toolbar"] button:hover {
-          border-radius: 9px;
-        }
-
+        [role="toolbar"] button,
         div[class*="flex items-center gap-2"] button {
           font-size: 0.93em;
           transition: background-color 0.3s, border-radius 0.3s;
         }
-
+        [role="toolbar"] button:hover,
         div[class*="flex items-center gap-2"] button:hover {
           border-radius: 9px;
         }
+        [data-panel-group-direction="horizontal"][role="separator"] {
+          width: 0px !important;
+          background: transparent !important;
+        }
       `,
+
+      /*
+       * ========== Additional Styles ==========
+       */
       styles: {
         sidebar: {
-          background: {
-            default: "#EEEEEE" // Sidebar background
-          },
-          foreground: {
-            default: "#2B2A2A" // Sidebar text
-          },
-          highlight: {
-            default: "#257180" // Sidebar highlights
-          }
+          background: { default: "#EEEEEE" },
+          foreground: { default: "#2B2A2A" },
+          highlight:  { default: "#257180" }
         },
         paneHeader: {
           background: {
-            default: "#EEEEEE", // Main pane header background
-            success: "#859F3D", // Success requests
-            notice: "#CFA8DC", // Notifications
-            warning: "#D8BCA8", // Warnings
-            danger: "#E5A1A1", // Errors
-            surprise: "#257180", // GET requests
-            info: "#CFA8DC" // Informational requests
-          },
+            default: "#EEEEEE",
+            success: "#859F3D",
+            notice: "#CFA8DC",
+            warning: "#D8BCA8",
+            danger: "#E5A1A1",
+            surprise: "#257180",
+            info: "#CFA8DC"
+          }
+          // foreground не задан, поэтому будет наследоваться.
         }
       }
     }
