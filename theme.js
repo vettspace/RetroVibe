@@ -1,8 +1,8 @@
 module.exports.themes = [
-  // Dark theme Retro Vibe
+  // Dark theme RetroVibe
   {
     name: "retro-vibe-dark-customized",
-    displayName: "Retro Vibe (Dark)",
+    displayName: "RetroVibe (Dark)",
     theme: {
       // Main theme colors
       background: {
@@ -79,6 +79,54 @@ module.exports.themes = [
           border-radius: 8px; /* Rounded corners */
         }
 
+        .p-4.flex-shrink-0 > .text-xs.max-h-32{
+          border-radius: 9px;
+          padding: 9px;
+          font-size: 10px;
+        }
+        [role="tablist"] {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        [aria-label="Request scripts tabs"] {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          text-align: center;
+          padding: 9px;
+        }
+
+        [role="toolbar"] {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          padding-left: 11px;
+          padding-right: 11px;
+        }
+        
+        [role="toolbar"] button {
+          font-size: 0.93em;
+          transition: background-color 0.3s, border-radius 0.3s;
+        }
+        [role="toolbar"] button:hover {
+          border-radius: 9px;
+        }
+
+        div[class*="flex items-center gap-2"] button {
+          font-size: 0.93em;
+          transition: background-color 0.3s, border-radius 0.3s;
+        }
+
+        div[class*="flex items-center gap-2"] button:hover {
+          border-radius: 9px;
+        }
+  
+
+
       `,
       styles: {
         sidebar: {
@@ -109,10 +157,10 @@ module.exports.themes = [
       }
     }
   },
-  // Light theme Retro Vibe
+  // Light theme RetroVibe
   {
     name: "retro-vibe-light-customized",
-    displayName: "Retro Vibe (Light)",
+    displayName: "RetroVibe (Light)",
     theme: {
       // Main theme colors
       background: {
@@ -141,6 +189,7 @@ module.exports.themes = [
         large: "#CFA8DC", // Large accents
         xlarge: "#E5A1A1" // Extra-large accents
       },
+
       rawCss: `
         /* Remove unnecessary borders and shadows */
         * {
@@ -185,6 +234,77 @@ module.exports.themes = [
         [role="menu"].dropdown__menu {
           border: 1px solid #257180 !important;
           background-color: #EEEEEE !important;
+        }
+        .flex flex-1 items-center gap-2{
+          color: #000 !important;
+        }
+
+        /*Pre-request */
+
+        [data-key="pre-request"][aria-selected="true"],
+        [data-key="after-response"][aria-selected="true"],
+        [data-key="write"][aria-selected="true"],
+        [data-key="preview"][aria-selected="true"] {
+          color: #607274 !important;
+        }
+
+        [data-key="pre-request"][aria-selected="false"],
+        [data-key="after-response"][aria-selected="false"],
+        [data-key="write"][aria-selected="false"] {
+          color: #919E9E !important;
+        }
+
+        [data-key="pre-request"]:hover,
+        [data-key="after-response"]:hover,
+        [data-key="write"]:hover,
+        [data-key="preview"]:hover {
+          color: #607274 !important;
+        }
+
+        .p-4.flex-shrink-0 > .text-xs.max-h-32{
+          border-radius: 9px;
+          padding: 9px;
+          font-size: 10px;
+        }
+        [role="tablist"] {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        [aria-label="Request scripts tabs"] {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          text-align: center;
+          padding: 9px;
+        }
+
+        [role="toolbar"] {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          padding-left: 11px;
+          padding-right: 11px;
+        }
+        
+        [role="toolbar"] button {
+          font-size: 0.93em;
+          transition: background-color 0.3s, border-radius 0.3s;
+        }
+        [role="toolbar"] button:hover {
+          border-radius: 9px;
+        }
+
+        div[class*="flex items-center gap-2"] button {
+          font-size: 0.93em;
+          transition: background-color 0.3s, border-radius 0.3s;
+        }
+
+        div[class*="flex items-center gap-2"] button:hover {
+          border-radius: 9px;
         }
       `,
       styles: {
