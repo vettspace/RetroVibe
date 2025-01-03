@@ -17,8 +17,8 @@ Retro Vibe is a custom theme for [Insomnia](https://insomnia.rest), inspired by 
 - **Enhanced Editor View:** Simplified styles for focus and readability.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6e0cabf4-bbb5-4358-9e68-6ccbfded0d8b" alt="dark" width="49%">
-  <img src="https://github.com/user-attachments/assets/a535a936-9837-4ce5-9b6e-c2c4eb24e95a" alt="light" width="49%">
+  <img src="https://github.com/user-attachments/assets/6e0cabf4-bbb5-4358-9e68-6ccbfded0d8b" alt="dark" width="100%">
+  <img src="https://github.com/user-attachments/assets/a535a936-9837-4ce5-9b6e-c2c4eb24e95a" alt="light" width="100%">
 </p>
 
 
