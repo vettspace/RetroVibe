@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-retro-vibe-theme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "«A flat-design retro theme for Insomnia, featuring soothing, nostalgia-infused color palettes.",
   "main": "theme.js",
   "keywords": [
