@@ -96,7 +96,7 @@ module.exports.themes = [
         ========================================== */
         [role="menu"].dropdown__menu {
           border: 1px solid #B0B7A4 !important;
-          border-radius: 8px;
+          border-radius: 12px;
         }
 
         /* =========================================
@@ -115,11 +115,12 @@ module.exports.themes = [
           border-radius: 6px !important;
         }
 
+
         /* =========================================
            7. Misc Small Styles
         ========================================== */
         .p-4.flex-shrink-0 > .text-xs.max-h-32 {
-          border-radius: 9px;
+          border-radius: 12px;
           padding: 9px;
           font-size: 10px;
         }
@@ -127,12 +128,13 @@ module.exports.themes = [
           display: flex;
           justify-content: center;
           align-items: center;
+
         }
         [aria-label="Request scripts tabs"] {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 9px;
+          padding: 0px;
           text-align: center;
         }
 
@@ -160,6 +162,67 @@ module.exports.themes = [
           width: 0px !important;
           background: transparent !important;
         }
+        .no-wrap.scrollable.scrollable--no-bars.pad-left > div {
+          border-radius: 12px !important;
+          padding: 5px 10px !important;
+        }
+
+        /* Dropdown menu background */
+        [role="menu"] {
+          background-color: #2B2B2B !important;
+          border-radius: 12px !important;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+          padding: 5px;
+        }
+
+        [role="listbox"] {
+          background-color: #2B2B2B !important;
+          border-radius: 12px !important;
+          padding: 5px;
+          margin: 3px;
+          margin-left: 5px;
+          box-sizing: border-box;
+          max-width: 97%;
+
+        }
+
+        /* Menu item styles */
+        [role="menuitemradio"],
+        [role="option"] {
+          background-color: transparent !important;
+          color: #C7C8CC !important;
+          margin: 2px 0 !important;
+          border-radius: 12px !important;
+        }
+
+        /* Hover effect for menu items */
+        [role="menuitemradio"]:hover {
+          background-color: #F4F2DE !important;
+          color: #424242 !important;
+        }
+
+        /* Active item styling */
+        [role="menuitemradio"][aria-checked="true"],
+        [role="option"][aria-selected="true"] {
+          background-color: #6E9CA1 !important;
+          color: #F4F2DE !important;
+          font-weight: bold !important;
+        }
+        .flex.flex-row button {
+          border-radius: 12px !important; 
+          transition: border-radius 0.3s, background-color 0.3s;
+        }
+
+        .flex.flex-row button:hover {
+          background-color: var(--hl-xs) 
+          border-radius: 12px !important;
+        }
+
+        .flex.flex-row button:focus {
+          border-radius: 12px !important;
+          outline: none; 
+        }
+
       `,
       /*
        * ========== Additional Styles ==========
@@ -324,7 +387,7 @@ module.exports.themes = [
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 9px;
+          padding: 0px;
         }
 
         /* =========================================
@@ -350,6 +413,65 @@ module.exports.themes = [
         [data-panel-group-direction="horizontal"][role="separator"] {
           width: 0px !important;
           background: transparent !important;
+        }
+        .no-wrap.scrollable.scrollable--no-bars.pad-left > div {
+          border-radius: 12px !important;
+          padding: 5px 10px !important;
+        }
+        
+        /* Dropdown menu background */
+        [role="menu"] {
+          background-color: #EEEEEE !important;
+          border-radius: 12px !important;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+          padding: 5px;
+        }
+
+        [role="listbox"] {
+          background-color: #EEEEEE !important;
+          border-radius: 12px !important;
+          padding: 5px;
+          margin: 3px;
+          margin-left: 5px;
+          box-sizing: border-box;
+          max-width: 97%;
+        }
+
+        /* Menu item styles */
+        [role="menuitemradio"],
+        [role="option"] {
+          background-color: transparent !important;
+          color: #363636 !important;
+          margin: 2px 0 !important;
+          border-radius: 12px !important;
+        }
+
+        /* Hover effect for menu items */
+        [role="menuitemradio"]:hover {
+          background-color: #F4F2DE !important;
+          color: #424242 !important;
+        }
+
+        /* Active item styling */
+        [role="menuitemradio"][aria-checked="true"],
+        [role="option"][aria-selected="true"] {
+          background-color: #6E9CA1 !important;
+          color: #F4F2DE !important;
+          font-weight: bold !important;
+        }
+        .flex.flex-row button {
+          border-radius: 12px !important; 
+          transition: border-radius 0.3s, background-color 0.3s;
+        }
+
+        .flex.flex-row button:hover {
+          background-color: var(--hl-xs) 
+          border-radius: 12px !important;
+        }
+
+        .flex.flex-row button:focus {
+          border-radius: 12px !important;
+          outline: none; 
         }
       `,
 
