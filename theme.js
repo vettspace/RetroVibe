@@ -91,6 +91,38 @@ module.exports.themes = [
           border-top-right-radius: 0px;
         }
 
+        [role="tab"][data-key="general"],
+        [role="tab"][data-key="proxy"],
+        [role="tab"][data-key="data"],
+        [role="tab"][data-key="themes"],
+        [role="tab"][data-key="keyboard"],
+        [role="tab"][data-key="plugins"],
+        [role="tab"][data-key="ai"] {
+          border-radius: 12px !important;
+        }
+
+        [role="tab"][data-key="general"][aria-selected="true"],
+        [role="tab"][data-key="proxy"][aria-selected="true"],
+        [role="tab"][data-key="data"][aria-selected="true"],
+        [role="tab"][data-key="themes"][aria-selected="true"],
+        [role="tab"][data-key="keyboard"][aria-selected="true"],
+        [role="tab"][data-key="plugins"][aria-selected="true"],
+        [role="tab"][data-key="ai"][aria-selected="true"] {
+          border-radius: 12px !important;
+          background-color: #6E9CA1 !important;
+          color: #F5F5F5 !important;
+        }
+
+        [role="tab"][data-key="general"][aria-selected="false"]:hover,
+        [role="tab"][data-key="proxy"][aria-selected="false"]:hover,
+        [role="tab"][data-key="data"][aria-selected="false"]:hover,
+        [role="tab"][data-key="themes"][aria-selected="false"]:hover,
+        [role="tab"][data-key="keyboard"][aria-selected="false"]:hover,
+        [role="tab"][data-key="plugins"][aria-selected="false"]:hover,
+        [role="tab"][data-key="ai"][aria-selected="false"]:hover {
+          border-radius: 12px !important;
+        }
+
         /* =========================================
            5. Dropdown Menu
         ========================================== */
@@ -159,8 +191,9 @@ module.exports.themes = [
           border-radius: 9px;
         }
         [data-panel-group-direction="horizontal"][role="separator"] {
-          width: 0px !important;
-          background: transparent !important;
+          width: 2px !important;
+          background: #191919 !important;
+
         }
         .no-wrap.scrollable.scrollable--no-bars.pad-left > div {
           border-radius: 12px !important;
@@ -344,6 +377,38 @@ module.exports.themes = [
           border-top-right-radius: 0px;
         }
 
+        [role="tab"][data-key="general"],
+        [role="tab"][data-key="proxy"],
+        [role="tab"][data-key="data"],
+        [role="tab"][data-key="themes"],
+        [role="tab"][data-key="keyboard"],
+        [role="tab"][data-key="plugins"],
+        [role="tab"][data-key="ai"] {
+          border-radius: 12px !important;
+        }
+
+        [role="tab"][data-key="general"][aria-selected="true"],
+        [role="tab"][data-key="proxy"][aria-selected="true"],
+        [role="tab"][data-key="data"][aria-selected="true"],
+        [role="tab"][data-key="themes"][aria-selected="true"],
+        [role="tab"][data-key="keyboard"][aria-selected="true"],
+        [role="tab"][data-key="plugins"][aria-selected="true"],
+        [role="tab"][data-key="ai"][aria-selected="true"] {
+          border-radius: 12px !important;
+          background-color: #257180 !important;
+          color: #F5F5F5 !important;
+        }
+
+        [role="tab"][data-key="general"][aria-selected="false"]:hover,
+        [role="tab"][data-key="proxy"][aria-selected="false"]:hover,
+        [role="tab"][data-key="data"][aria-selected="false"]:hover,
+        [role="tab"][data-key="themes"][aria-selected="false"]:hover,
+        [role="tab"][data-key="keyboard"][aria-selected="false"]:hover,
+        [role="tab"][data-key="plugins"][aria-selected="false"]:hover,
+        [role="tab"][data-key="ai"][aria-selected="false"]:hover {
+          border-radius: 12px !important;
+        }
+
         /* =========================================
            5. Dropdown Menu
         ========================================== */
@@ -411,8 +476,8 @@ module.exports.themes = [
           border-radius: 9px;
         }
         [data-panel-group-direction="horizontal"][role="separator"] {
-          width: 0px !important;
-          background: transparent !important;
+          width: 2px !important;
+          background: #EEEEEE !important;
         }
         .no-wrap.scrollable.scrollable--no-bars.pad-left > div {
           border-radius: 12px !important;
