@@ -63,4 +63,4 @@ We love collaboration!
 
 ---
 
-#### Made with 💙 by [vettspace](https://github.com/vettspaces)
+#### Made with 💙 by [vettspace](https://github.com/vettspace)
