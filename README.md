@@ -1,7 +1,7 @@
 # RetroVibe Theme for Insomnia
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d71d61ef-7561-44cf-8a51-87867f3692d8" alt="RetroVibe Theme Preview" width="100%">
+  <img src="https://github.com/user-attachments/assets/2029f75d-c0d9-49ce-84d7-69efd25bbc54" alt="RetroVibe Theme Preview" width="100%">
 </p>
 
 RetroVibe is a custom theme for [Insomnia](https://insomnia.rest/), designed to blend retro aesthetics with modern functionality. It includes **dark** and **light** variants, featuring calming color palettes and a minimalistic design to make API testing a visually enjoyable and productive experience.
@@ -17,8 +17,8 @@ RetroVibe is a custom theme for [Insomnia](https://insomnia.rest/), designed to 
 - **Enhanced Editor View**: Optimized for readability with subtle visual enhancements.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fafad280-c3eb-485e-a5bc-85339ea555cc" alt="Dark Theme Preview" width="100%">
-  <img src="https://github.com/user-attachments/assets/88574105-8e04-4d46-a7c3-4dc2420a16a6" alt="Light Theme Preview" width="100%">
+  <img src="https://github.com/user-attachments/assets/87c24208-3b9d-4957-85af-86c2cad7a662" alt="Dark Theme Preview" width="100%">
+  <img src="https://github.com/user-attachments/assets/18c2f854-e6f4-4c14-9c9c-3120b0627fd7" alt="Light Theme Preview" width="100%">
 </p>
 
 ---
