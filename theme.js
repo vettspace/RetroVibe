@@ -171,8 +171,8 @@ module.exports.themes = [
         [role="menu"] {
           background-color: #2B2B2B !important;
           border-radius: 12px !important;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
           padding: 5px;
+          border: 1px solid #424242 !important;
         }
         [role="listbox"] {
           background-color: #2B2B2B !important;
@@ -184,14 +184,15 @@ module.exports.themes = [
         }
         [role="menuitemradio"],
         [role="option"] {
-          background-color: transparent !important;
+          background-color: #1F1F1F !important;
           color: #C7C8CC !important;
           margin: 2px 0 !important;
           border-radius: 12px !important;
+          border: 1px solid #191919 !important;
         }
         [role="menuitemradio"]:hover {
-          background-color: #F4F2DE !important;
-          color: #424242 !important;
+          background-color: #363636 !important;
+          color: #F5F5F5 !important;
         }
         [role="menuitemradio"][aria-checked="true"],
         [role="option"][aria-selected="true"] {
@@ -413,6 +414,8 @@ module.exports.themes = [
           border-radius: 12px !important;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
           padding: 5px;
+          border: 1px solid #B0B7A4 !important;
+
         }
         [role="listbox"] {
           background-color: #EEEEEE !important;
@@ -421,13 +424,17 @@ module.exports.themes = [
           margin: 3px 5px;
           box-sizing: border-box;
           max-width: 97%;
+
+
         }
         [role="menuitemradio"],
         [role="option"] {
-          background-color: transparent !important;
+          background-color: #FFFFFF !important;
           color: #363636 !important;
           margin: 2px 0 !important;
           border-radius: 12px !important;
+          border: 1px solid #B0B7A4 !important;
+
         }
         [role="menuitemradio"]:hover {
           background-color: #F4F2DE !important;
