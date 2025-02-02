@@ -56,6 +56,22 @@ We love collaboration!
 
 ---
 
+### ☕ Support the Project
+
+Creating and maintaining themes takes time and effort. If you enjoy RetroVibe Theme and would like to support its development, consider making a small donation. 
+Your support helps keep the project alive and evolving! 💙
+
+#### Bitcoin (BTC) Address:
+```
+bc1ql5g77v0ctardgcfnxhw8gp5fkp9xx6jsxh3udt
+```
+
+<p align="center">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bc1ql5g77v0ctardgcfnxhw8gp5fkp9xx6jsxh3udt" alt="Bitcoin QR Code">
+</p>
+
+---
+
 ### 💖 Acknowledgements
 
 - Inspired by retro design trends and the science of color theory.

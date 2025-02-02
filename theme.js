@@ -212,6 +212,14 @@ module.exports.themes = [
           border-radius: 12px !important;
           outline: none;
         }
+        [data-panel-group][data-panel-group-direction="vertical"] {
+          display: block !important;
+        }
+        [role="separator"][data-panel-group-direction="vertical"] {
+          display: none !important;
+          border: none !important;
+          height: 0 !important;
+        }     
       `,
 
       // Additional Styles
@@ -421,9 +429,10 @@ module.exports.themes = [
           background-color: #EEEEEE !important;
           border-radius: 12px !important;
           padding: 5px;
-          margin: 3px 5px;
+          margin: 5px 5px;
           box-sizing: border-box;
-          max-width: 97%;
+          max-width: 98%;
+          
 
 
         }
@@ -458,6 +467,14 @@ module.exports.themes = [
           border-radius: 12px !important;
           outline: none;
         }
+        [data-panel-group][data-panel-group-direction="vertical"] {
+          display: block !important;
+        }
+        [role="separator"][data-panel-group-direction="vertical"] {
+            display: none !important;
+            border: none !important;
+            height: 0 !important;
+        }        
       `,
 
       // Additional Styles
