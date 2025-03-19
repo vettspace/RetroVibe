@@ -3,35 +3,35 @@ module.exports.themes = [
   //   Dark Theme: RetroVibe Customized
   // ----------------------------------------
   {
-    name: 'retro-vibe-dark-customized',
-    displayName: 'RetroVibe (Dark)',
+    name: "retro-vibe-dark-customized",
+    displayName: "RetroVibe (Dark)",
     theme: {
       // Color Settings
       background: {
-        default: '#1F1F1F', // Main background
-        success: '#859F3D', // For POST requests
-        notice: '#DA7297',  // For notifications or PATCH requests
-        warning: '#FFC470', // For PUT requests
-        danger: '#9A3B3B',  // For DELETE requests
-        surprise: '#6E9CA1',// For GET requests
-        info: '#BB7CD7'     // For OPTIONS/HEAD
+        default: "#1F1F1F", // Main background
+        success: "#859F3D", // For POST requests
+        notice: "#DA7297", // For notifications or PATCH requests
+        warning: "#FFC470", // For PUT requests
+        danger: "#9A3B3B", // For DELETE requests
+        surprise: "#6E9CA1", // For GET requests
+        info: "#BB7CD7", // For OPTIONS/HEAD
       },
       foreground: {
-        default: '#C7C8CC',
-        success: '#F5F5F5',
-        notice: '#C7C8CC',
-        warning: '#F5F5F5',
-        danger: '#C7C8CC',
-        surprise: '#C7C8CC',
-        info: '#1F1F1F'
+        default: "#C7C8CC",
+        success: "#F5F5F5",
+        notice: "#C7C8CC",
+        warning: "#F5F5F5",
+        danger: "#C7C8CC",
+        surprise: "#C7C8CC",
+        info: "#1F1F1F",
       },
       highlight: {
-        default: '#B0B7A4',
-        xsmall: '#6FB4C0',
-        small: '#C99C6E',
-        medium: '#A1C281',
-        large: '#BB7CD7',
-        xlarge: '#C96868'
+        default: "#B0B7A4",
+        xsmall: "#6FB4C0",
+        small: "#C99C6E",
+        medium: "#A1C281",
+        large: "#BB7CD7",
+        xlarge: "#C96868",
       },
 
       // Raw CSS Overrides
@@ -219,67 +219,113 @@ module.exports.themes = [
           display: none !important;
           border: none !important;
           height: 0 !important;
-        }     
+        }
+        .flex.box-content {
+  			background-color: #191919 !important;
+		}    
+        /* Стили для вкладок (Тёмная тема) */
+[role="row"][aria-label^="tab-"] {
+  background-color: #191919 !important; /* Тёмный фон вкладки */
+  padding: 0px 4px !important; /* Внутренние отступы */
+  border-radius: 12px !important; /* Скругление углов (12px) */
+  border: 1px solid var(--hl-sm) !important; /* Граница */
+  margin: 4px !important; /* Внешний отступ */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ховер-эффект */
+[role="row"][aria-label^="tab-"]:hover {
+  background-color: #363636 !important; /* Чуть светлее при наведении */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Активная (выбранная) вкладка */
+[role="row"][aria-label^="tab-"][aria-selected="true"] {
+  background-color: #292929 !important;
+  border: 1px solid var(--hl-md) !important;
+  font-weight: bold !important;
+}
+
+/* Убираем подчеркивания */
+[role="row"][aria-label^="tab-"]::after {
+  display: none !important;
+}
+
+/* Стили для закрывающей кнопки */
+[role="row"][aria-label^="tab-"] button {
+  border-radius: 8px !important;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+[role="row"][aria-label^="tab-"] button:hover {
+  background-color: var(--hl-md) !important;
+  border-radius: 12px !important;
+}
+
+/* Убираем белые полосы под вкладками */
+[role="row"][aria-label^="tab-"] span.block.absolute {
+  display: none !important;
+}     
       `,
 
       // Additional Styles
       styles: {
         sidebar: {
-          background: { default: '#191919' },
-          foreground: { default: '#C7C8CC' },
-          highlight:  { default: '#6E9CA1' }
+          background: { default: "#191919" },
+          foreground: { default: "#C7C8CC" },
+          highlight: { default: "#6E9CA1" },
         },
         paneHeader: {
           background: {
-            default: '#191919',
-            success: '#7F9F80',
-            notice: '#BB7CD7',
-            warning: '#AF8260',
-            danger: '#9A3B3B',
-            surprise: '#6E9CA1',
-            info: '#BB7CD7'
+            default: "#191919",
+            success: "#7F9F80",
+            notice: "#BB7CD7",
+            warning: "#AF8260",
+            danger: "#9A3B3B",
+            surprise: "#6E9CA1",
+            info: "#BB7CD7",
           },
           foreground: {
-            surprise: '#F4F2DE'
-          }
-        }
-      }
-    }
+            surprise: "#F4F2DE",
+          },
+        },
+      },
+    },
   },
 
   // ----------------------------------------
   //   Light Theme: RetroVibe Customized
   // ----------------------------------------
   {
-    name: 'retro-vibe-light-customized',
-    displayName: 'RetroVibe (Light)',
+    name: "retro-vibe-light-customized",
+    displayName: "RetroVibe (Light)",
     theme: {
       // Color Settings
       background: {
-        default: '#FFFFFF', // Main background
-        success: '#5C8984', // For POST requests
-        notice: '#BE5A83',  // For notifications
-        warning: '#FFA500', // For warnings/PUT
-        danger: '#BE5A83',  // For DELETE requests
-        surprise: '#7E5CAD',// For GET requests
-        info: '#CFA8DC'     // For OPTIONS/HEAD
+        default: "#FFFFFF", // Main background
+        success: "#5C8984", // For POST requests
+        notice: "#BE5A83", // For notifications
+        warning: "#FFA500", // For warnings/PUT
+        danger: "#BE5A83", // For DELETE requests
+        surprise: "#7E5CAD", // For GET requests
+        info: "#CFA8DC", // For OPTIONS/HEAD
       },
       foreground: {
-        default: '#607274',
-        success: '#F5F5F5',
-        notice: '#4B5945',
-        warning: '#4B5945',
-        danger: '#F5F5F5',
-        surprise: '#F7F7F7',
-        info: '#FFFFFF'
+        default: "#607274",
+        success: "#F5F5F5",
+        notice: "#4B5945",
+        warning: "#4B5945",
+        danger: "#F5F5F5",
+        surprise: "#F7F7F7",
+        info: "#FFFFFF",
       },
       highlight: {
-        default: '#607274',
-        xsmall: '#A5CAD6',
-        small: '#D8BCA8',
-        medium: '#C5DAB0',
-        large: '#CFA8DC',
-        xlarge: '#E5A1A1'
+        default: "#607274",
+        xsmall: "#A5CAD6",
+        small: "#D8BCA8",
+        medium: "#C5DAB0",
+        large: "#CFA8DC",
+        xlarge: "#E5A1A1",
       },
 
       // Raw CSS Overrides
@@ -474,29 +520,74 @@ module.exports.themes = [
             display: none !important;
             border: none !important;
             height: 0 !important;
-        }        
+        }
+        .flex.box-content {
+  			background-color: #EEEEEE !important;
+		}       
+		/* Стили для вкладок */
+[role="row"][aria-label^="tab-"] {
+  background-color: #F5F5F5 !important; /* Фон вкладки */
+  padding: 0px 4px !important; /* Внутренние отступы */
+  border-radius: 12px !important; /* Скругление углов */
+  border: 1px solid var(--hl-sm) !important; /* Граница */
+  margin: 4px !important; /* Внешний отступ */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ховер-эффект */
+[role="row"][aria-label^="tab-"]:hover {
+  background-color: #EDEDED !important; /* Чуть темнее при наведении */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Активная (выбранная) вкладка */
+[role="row"][aria-label^="tab-"][aria-selected="true"] {
+  background-color: #E0E0E0 !important;
+  border: 1px solid var(--hl-md) !important;
+  font-weight: bold !important;
+}
+
+/* Убираем подчеркивания */
+[role="row"][aria-label^="tab-"]::after {
+  display: none !important;
+}
+
+/* Стили для закрывающей кнопки */
+[role="row"][aria-label^="tab-"] button {
+  border-radius: 6px !important;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+[role="row"][aria-label^="tab-"] button:hover {
+  background-color: var(--hl-md) !important;
+  border-radius: 8px !important;
+}
+/* Убираем белые полосы под вкладками */
+[role="row"][aria-label^="tab-"] span.block.absolute {
+  display: none !important;
+}
       `,
 
       // Additional Styles
       styles: {
         sidebar: {
-          background: { default: '#EEEEEE' },
-          foreground: { default: '#2B2A2A' },
-          highlight:  { default: '#257180' }
+          background: { default: "#EEEEEE" },
+          foreground: { default: "#2B2A2A" },
+          highlight: { default: "#257180" },
         },
         paneHeader: {
           background: {
-            default: '#EEEEEE',
-            success: '#859F3D',
-            notice: '#CFA8DC',
-            warning: '#D8BCA8',
-            danger: '#E5A1A1',
-            surprise: '#257180',
-            info: '#CFA8DC'
-          }
+            default: "#EEEEEE",
+            success: "#859F3D",
+            notice: "#CFA8DC",
+            warning: "#D8BCA8",
+            danger: "#E5A1A1",
+            surprise: "#257180",
+            info: "#CFA8DC",
+          },
           // foreground not set here; it will inherit default
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 ];
