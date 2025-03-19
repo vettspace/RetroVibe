@@ -16,11 +16,6 @@ RetroVibe is a custom theme for [Insomnia](https://insomnia.rest/), designed to 
 - **Request Type Highlighting**: Unique colors for HTTP methods like POST, GET, DELETE, and more.
 - **Enhanced Editor View**: Optimized for readability with subtle visual enhancements.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/af5b4d65-050f-4782-b310-85d8bf55ffaf" alt="Dark Theme Preview" width="100%">
-  <img src="https://github.com/user-attachments/assets/e1436b1b-8470-4450-88e1-7842ef0e1bc4" alt="Light Theme Preview" width="100%">
-</p>
-
 ---
 
 ## 🛠 Installation
